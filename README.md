@@ -65,3 +65,17 @@ replicaset.apps/frontend-7cf9b8c948       2         2         2       7m27s
 replicaset.apps/reverseproxy-65f8c8bf9c   2         2         2       7m27s
 boris@ubuntu20box:~/aug17/udacity-kubernetes-project$
 ```
+
+## Travis CI
+
+Push to the Docker hub - see the docker_push script. I push to Docker hub then I deploy locally to the kind cluster on my Ubuntu. I cannot use kubectl for deployment.
+
+```
+#!/bin/bash
+echo "$dockerhub" | docker login -u boristulukin --password-stdin
+
+docker push boristulukin/udacity-frontend
+docker push boristulukin/udacity-restapi-user
+docker push boristulukin/udacity-restapi-feed
+docker push boristulukin/reverseproxy
+```

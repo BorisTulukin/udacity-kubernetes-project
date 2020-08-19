@@ -13,9 +13,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 install:
-  #  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel
-  - docker pull stefanprodan/podinfo
-  - docker tag stefanprodan/podinfo boristulukin/podinfo
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel
 
 deploy:
   provider: script

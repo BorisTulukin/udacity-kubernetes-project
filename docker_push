@@ -1,4 +1,7 @@
 #!/bin/bash
 echo "$dockerhub" | docker login -u boristulukin --password-stdin
-docker push boristulukin/podinfo
 
+docker push boristulukin/udacity-frontend
+docker push boristulukin/udacity-restapi-user
+docker push boristulukin/udacity-restapi-feed
+docker push boristulukin/reverseproxy
