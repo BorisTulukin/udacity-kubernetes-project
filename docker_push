@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "$dockerhub" | docker login -u boristulukin --password-stdin
+docker push boristulukin/podinfo
+
